@@ -1,5 +1,9 @@
-CREATE EXTENSION postgis;
-CREATE EXTENSION postgis_topology;
+CREATE SCHEMA ppac; -- Posgis Poygon Angle Calculation
+
+CREATE EXTENSION postgis SCHEMA ppac;
+CREATE EXTENSION postgis_topology SCHEMA ppac;
+
+SET SCHEMA 'ppac';
 
 SELECT postgis_full_version();
 -- POSTGIS="2.1.8 r13780" GEOS="3.4.2-CAPI-1.8.2 r3921" PROJ="Rel. 4.8.0, 6 March 2012" GDAL="GDAL 1.10.1,
